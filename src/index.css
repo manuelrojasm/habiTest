@@ -75,3 +75,17 @@ body {
 .fadeOut {
   animation: 0.5s fadeOut forwards;
 }
+
+.stepper {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.stepper-buttons {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

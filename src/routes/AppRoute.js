@@ -14,7 +14,12 @@ export default function AppRouter() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           {ROUTES.map((route, i) => (
-            <Route path={route.path} element={route.component} key={i + 1} />
+            <Route
+              path={route.path}
+              index={route.order}
+              element={route.component}
+              key={i + 1}
+            />
           ))}
           <Route path="*" element={<h1>404 Not found</h1>} />
         </Routes>
