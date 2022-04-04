@@ -46,13 +46,5 @@ export const ROUTES = [
     component: <CommonArea/>,
     order: 5,
     description: "Quinto paso: Unos checkbox que me digan si el apartamento tiene alguna de las siguientes opciones: Zona BBQ, salón comunal, parque de juegos",
-  },
-  {
-    path: "resumen",
-    name: "resumen",
-    optional: false,
-    component: <Resume/>,
-    order: 6,
-    description: " Último paso: presentar el resumen de los datos que puso el usuario en el paso anterior",
   }
 ];

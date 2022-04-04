@@ -4,13 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../contexts/UserContext";
 
-const steps = [
-  "Select campaign settings",
-  "Create an ad group",
-  "Create an ad",
-];
-
-export default function StepperCustom() {
+export default function StepperCustom({validate}) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
@@ -51,17 +45,23 @@ export default function StepperCustom() {
       <div className="stepper-buttons">
         <Button
           variant="contained"
+          className="buttonCustom"
           disabled={activeStep === 0}
           onClick={handleBack}
         >
           Atras
         </Button>
         {routeActual.optional && (
-          <Button color="inherit" onClick={handleSkip}>
+          <Button color="inherit" onClick={handleSkip} className="buttonSkip">
             Saltar
           </Button>
         )}
-        <Button variant="contained" onClick={handleNext}>
+        <Button
+          variant="contained"
+          onClick={handleNext}
+          className="buttonCustom"
+          disabled={validate}
+        >
           {step === routes.length - 1 ? "Enviar" : "Siguiente"}
         </Button>
       </div>

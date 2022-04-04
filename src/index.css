@@ -4,13 +4,17 @@
   --primary: #6a06fa;
   --secondary: #ff5958;
   --white: #ffffff;
+  --gray: #9e9e9e;
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   margin: 0;
   background-color: var(--primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Open Sans, sans-serif;
 }
 
 .animation {
@@ -89,3 +93,46 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+.stepper-buttons:disabled {
+  background-color: #ff5958 !important;
+}
+
+.content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  min-height: 86%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputCustom {
+  width: 300px;
+}
+
+.inputCustom label {
+  color: var(--primary);
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.buttonCustom:disabled {
+  background-color: var(--gray) !important;
+  color: var(--primary) !important;
+}
+
+.buttonCustom {
+  background-color: var(--white) !important;
+  color: var(--primary) !important;
+}
+
+.buttonSkip{
+  background-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+
