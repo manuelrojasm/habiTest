@@ -26,7 +26,9 @@ export default function UserAddress() {
             </div>
           </CardContent>
         </Card>
-        <Summary/>
+        <div className="resume-rigth">
+          <Summary />
+        </div>
       </div>
       <Stepper validate={!address} />
     </div>

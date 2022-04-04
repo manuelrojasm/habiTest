@@ -27,7 +27,9 @@ export default function UserEmail() {
             </div>
           </CardContent>
         </Card>
-        <Summary />
+        <div className="resume-rigth">
+          <Summary />
+        </div>
       </div>
       <Stepper
         validate={

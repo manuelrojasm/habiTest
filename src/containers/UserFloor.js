@@ -28,7 +28,9 @@ export default function UserFloor() {
             </div>
           </CardContent>
         </Card>
-        <Summary />
+        <div className="resume-rigth">
+          <Summary />
+        </div>
       </div>
       <Stepper validate={false} />
     </>

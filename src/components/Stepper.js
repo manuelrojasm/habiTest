@@ -3,8 +3,9 @@ import { Button, Step, StepLabel, Stepper } from "@material-ui/core";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../contexts/UserContext";
+import Swal from "sweetalert2";
 
-export default function StepperCustom({validate}) {
+export default function StepperCustom({ validate }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
@@ -17,7 +18,17 @@ export default function StepperCustom({validate}) {
   const step = routeActual.order - 1;
 
   const handleNext = () => {
-    navigate("/" + routes[step + 1].path);
+    let route = routes[step + 1]?.path;
+    if (route) {
+      navigate("/" + routes[step + 1].path);
+    } else {
+      Swal.fire({
+        icon: "success",
+        title: "Tus datos se han envíado",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
   };
 
   const handleBack = () => {

@@ -58,7 +58,9 @@ export default function UserCommonArea() {
             />
           </CardContent>
         </Card>
-        <Summary/>
+        <div className="resume-rigth">
+          <Summary />
+        </div>
       </div>
       <Stepper
         validate={zonabbq || saloncomunal || parquedejuegos ? false : true}
