@@ -152,6 +152,7 @@ body {
 .resume {
   width: max-content;
   min-height: 100px;
+  min-width: 28vw;
 }
 
 .resume-item label {
