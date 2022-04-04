@@ -19,6 +19,7 @@ export default function UserData() {
               <TextField
                 id="name"
                 variant="outlined"
+                defaultValue={name}
                 className="inputCustom"
                 onChange={(e) => SetName(e.target.value )}
               />

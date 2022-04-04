@@ -5,6 +5,7 @@
   --secondary: #ff5958;
   --white: #ffffff;
   --gray: #9e9e9e;
+  --black: #000123;
 }
 
 body {
@@ -109,6 +110,19 @@ body {
   flex-direction: column;
 }
 
+.content-grid {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  min-height: 86%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-items: center;
+}
+
 .inputCustom {
   width: 300px;
 }
@@ -133,6 +147,30 @@ body {
 .buttonSkip{
   background-color: var(--secondary) !important;
   color: var(--white) !important;
+}
+
+.resume {
+  width: max-content;
+  min-width: 400px;
+  min-height: 100px;
+}
+
+.resume-item label{
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.resume-item h3{
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--black);
+  margin: 0;
+  padding: 0 0 0 5px;
+}
+
+.resume-item img{
+  padding: 5px 10px 5px 10px;
 }
 
 

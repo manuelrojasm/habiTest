@@ -4,13 +4,14 @@ import { Card, CardContent, TextField } from "@material-ui/core";
 import { useContext } from "react";
 
 import { DataContext } from "../contexts/UserContext";
+import Summary from "../components/Summary";
 
 export default function UserAddress() {
   const { address, SetAddress } = useContext(DataContext);
 
   return (
     <div>
-      <div className="content">
+      <div className="content-grid">
         <Card sx={{ minWidth: 5005 }}>
           <CardContent>
             <div className="inputCustom">
@@ -19,11 +20,13 @@ export default function UserAddress() {
                 id="address"
                 variant="outlined"
                 className="inputCustom"
+                defaultValue={address}
                 onChange={(e) => SetAddress(e.target.value)}
               />
             </div>
           </CardContent>
         </Card>
+        <Summary/>
       </div>
       <Stepper validate={!address} />
     </div>

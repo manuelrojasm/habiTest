@@ -9,6 +9,7 @@ import {
 import { useContext, useState } from "react";
 
 import { DataContext } from "../contexts/UserContext";
+import Summary from "../components/Summary";
 
 export default function UserCommonArea() {
 
@@ -16,7 +17,7 @@ export default function UserCommonArea() {
 
   return (
     <>
-      <div className="content">
+      <div className="content-grid">
         <Card sx={{ minWidth: 5005 }}>
           <CardContent>
             <div className="inputCustom">
@@ -26,6 +27,7 @@ export default function UserCommonArea() {
               control={
                 <Checkbox
                   onChange={() => SetZonabbq(!zonabbq)}
+                  checked={zonabbq}
                   name="zonabbq"
                   color="primary"
                 />
@@ -36,6 +38,7 @@ export default function UserCommonArea() {
               control={
                 <Checkbox
                   onChange={() => SetSaloncomunal(!saloncomunal)}
+                  checked={saloncomunal}
                   name="saloncomunal"
                   color="primary"
                 />
@@ -46,6 +49,7 @@ export default function UserCommonArea() {
               control={
                 <Checkbox
                   onChange={() => SetParquedejuegos(!parquedejuegos)}
+                  checked={parquedejuegos}
                   name="parquedejuegos"
                   color="primary"
                 />
@@ -54,6 +58,7 @@ export default function UserCommonArea() {
             />
           </CardContent>
         </Card>
+        <Summary/>
       </div>
       <Stepper
         validate={zonabbq || saloncomunal || parquedejuegos ? false : true}

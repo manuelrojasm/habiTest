@@ -16,8 +16,6 @@ export default function StepperCustom({validate}) {
 
   const step = routeActual.order - 1;
 
-  const [activeStep, setActiveStep] = React.useState(step);
-
   const handleNext = () => {
     navigate("/" + routes[step + 1].path);
   };
@@ -26,33 +24,19 @@ export default function StepperCustom({validate}) {
     navigate("/" + routes[step - 1].path);
   };
 
-  const handleSkip = () => {
-    // if (!isStepOptional(activeStep)) {
-    //   // You probably want to guard against something like this,
-    //   // it should never occur unless someone's actively trying to break something.
-    //   throw new Error("You can't skip a step that isn't optional.");
-    // }
-    // setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    // setSkipped((prevSkipped) => {
-    //   const newSkipped = new Set(prevSkipped.values());
-    //   newSkipped.add(activeStep);
-    //   return newSkipped;
-    // });
-  };
-
   return (
     <div className="stepper">
       <div className="stepper-buttons">
         <Button
           variant="contained"
           className="buttonCustom"
-          disabled={activeStep === 0}
+          disabled={step === 0}
           onClick={handleBack}
         >
           Atras
         </Button>
         {routeActual.optional && (
-          <Button color="inherit" onClick={handleSkip} className="buttonSkip">
+          <Button color="inherit" onClick={handleNext} className="buttonSkip">
             Saltar
           </Button>
         )}
