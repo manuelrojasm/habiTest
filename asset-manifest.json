@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/manuelrojasm/habiTest/static/css/main.6de1c18b.css",
+    "main.js": "/manuelrojasm/habiTest/static/js/main.9d9137d5.js",
+    "static/media/salon.png": "/manuelrojasm/habiTest/static/media/salon.50f272765b59f0aa189c.png",
+    "static/media/playground.png": "/manuelrojasm/habiTest/static/media/playground.b7168acf7d9668c2b676.png",
+    "static/media/barbecue.png": "/manuelrojasm/habiTest/static/media/barbecue.9f04abc0531ed00d3a46.png",
+    "static/media/habi.svg": "/manuelrojasm/habiTest/static/media/habi.8c607eaf0d86f3f38fd7d158fe21db4c.svg",
+    "index.html": "/manuelrojasm/habiTest/index.html",
+    "main.6de1c18b.css.map": "/manuelrojasm/habiTest/static/css/main.6de1c18b.css.map",
+    "main.9d9137d5.js.map": "/manuelrojasm/habiTest/static/js/main.9d9137d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6de1c18b.css",
+    "static/js/main.9d9137d5.js"
+  ]
+}
